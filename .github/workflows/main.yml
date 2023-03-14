@@ -4,28 +4,28 @@ on:
   push:
 
 jobs:
-  pnpm-7-18:
+  pnpm-7-28:
     runs-on: ubuntu-22.04
-    name: PNPM 7.18
+    name: PNPM 7.28
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
         with:
-          version: 7.18.x
+          version: 7.28.x
       - uses: actions/setup-node@v3
         with:
           node-version: 16
       - run: pnpm install
       - run: pnpm run test
 
-  pnpm-7-19:
+  pnpm-7-29:
     runs-on: ubuntu-22.04
-    name: PNPM 7.19
+    name: PNPM 7.29
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
         with:
-          version: 7.19.x
+          version: 7.29.x
       - uses: actions/setup-node@v3
         with:
           node-version: 16
