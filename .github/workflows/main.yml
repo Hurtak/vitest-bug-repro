@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: 16
       - run: pnpm install
+      - run: npx envinfo --system --npmPackages '{vitest,@vitest/*,vite,@vitejs/*}' --binaries --browsers
       - run: pnpm run test
 
   pnpm-7-29:
@@ -30,4 +31,5 @@ jobs:
         with:
           node-version: 16
       - run: pnpm install
+      - run: npx envinfo --system --npmPackages '{vitest,@vitest/*,vite,@vitejs/*}' --binaries --browsers
       - run: pnpm run test
