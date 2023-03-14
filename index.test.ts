@@ -1,6 +1,8 @@
-import { describe, it, expect, assert } from 'vitest';
-import {add} from './index'
+import { describe, test, expect } from "vitest";
+import { add } from "./index";
 
-describe('add', () => {
-    expect(add(1,2)).toBe(3)
-})
+describe("add", () => {
+  test("add 1 + 1 to equal 2", () => {
+    expect(add(1, 1)).toBe(2);
+  });
+});

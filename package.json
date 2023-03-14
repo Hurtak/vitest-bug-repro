@@ -1,15 +1,11 @@
 {
   "name": "pnpm-vitest-repro",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "vitest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "vitest": "0.29.2"
   }
 }
