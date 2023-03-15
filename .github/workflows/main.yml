@@ -19,9 +19,39 @@ jobs:
       - run: npx envinfo --system --npmPackages '{vitest,@vitest/*,vite,@vitejs/*}' --binaries --browsers
       - run: pnpm run test
 
-  pnpm-7-29:
+  pnpm-7-29-0:
     runs-on: ubuntu-22.04
-    name: PNPM 7.29
+    name: PNPM 7.29.0
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.29.x
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: pnpm install
+      - run: npx envinfo --system --npmPackages '{vitest,@vitest/*,vite,@vitejs/*}' --binaries --browsers
+      - run: pnpm run test
+
+  pnpm-7-29-1:
+    runs-on: ubuntu-22.04
+    name: PNPM 7.29-1
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.29.x
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: pnpm install
+      - run: npx envinfo --system --npmPackages '{vitest,@vitest/*,vite,@vitejs/*}' --binaries --browsers
+      - run: pnpm run test
+
+  pnpm-7-29-3:
+    runs-on: ubuntu-22.04
+    name: PNPM 7.29-3
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
